@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-areas: auto 50px; */
+  box-sizing: border-box;
+}
+
+.link {
+  background-color: #4187f6;
+  background-image: url("log.png");
+  background-position-x: 18px;
+  background-position-y: -90px;
+  height: 260px;
+  color: white;
+  padding: 170px 120px;
+}
+
+.link section {
+  padding: 30px 0px;
+  font-size: 1.3em;
+}
+.link section i {
+  margin-right: 9px;
+  font-size: 1.1em;
+  float: left;
+}
+.link section p {
+  line-height: 0.8em;
+  font-weight: bold;
+}
+.right {
+  background-color: rgb(255, 255, 255);
+  padding: 120px 120px;
+}
+.right-top {
+  display: grid;
+  grid-template-columns: 50px auto 70px;
+  grid-auto-rows: 1fr 1 fr;
+  grid-row-gap: 18px;
+  padding-bottom: 35px;
+}
+.bird {
+  width: 50px;
+  height: 40px;
+  grid-column: 1;
+}
+
+.log-in {
+  text-decoration: none;
+  border: 1px solid #4187f6;
+  color: #4187f6;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 0.9em;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  grid-column: 3;
+  text-align: center;
+}
+h2 {
+  grid-area: 2/2 /2/4;
+}
+.right-bottom {
+  padding: 0px 50px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 15px;
+}
+.sign-up,
+.log-in2 {
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.sign-up {
+  color: white;
+  background-color: #4187f6;
+}
+.sign-up:hover {
+  background-color: rgb(4, 4, 156);
+}
+
+.log-in2 {
+  border: 1px solid #4187f6;
+}
+
+.log-in2:hover,
+.log-in:hover {
+  background-color: #eaf3fe;
+}
+
+footer {
+  background-color: rgb(235, 231, 231);
+  z-index: 2;
+  grid-area: 2/1/2/3;
+  padding: 20px 4px;
+  margin-bottom: 0;
+}
+footer ul li a,
+footer ul li {
+  font-size: 13px;
+  color: rgba(128, 128, 128, 0.658);
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+footer ul li {
+  display: inline;
+  margin: 5px;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .link {
+    grid-row: 1;
+  }
+  .right {
+    grid-row: 2;
+  }
+
+  footer {
+    grid-row: 3;
+  }
+}
